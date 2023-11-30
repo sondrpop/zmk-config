@@ -57,7 +57,7 @@
 	    bindings = <
  
         &kp P        &kp C        &kp L         &kp M      &kp V                &kp X      &kp U       &kp O         &kp Y        &kp F
-        &mt LCTRL N  &kp S        &lt num R     &lt symr T &kp D                &kp DOT    &lt syml A  &lt vimnav E  &kp I        &mt R CTRL H
+        &mt LCTRL N  &kp S        &lt num R     &lt symr T &kp D                &kp DOT    &lt 2 A  &lt 5 E       &kp I        &mt R CTRL H
         &mt LGUI B   &mt LSHFT G  &mt LALT QUOT &kp W      &kp Z                &kp COLON  &kp CMMA    &mt RALT Q    &mt RSHFT J  &mt RGUI K
                                                 &kp SPACE  &sk LSHIFT           &kp N1     &kp BSPC
         		
