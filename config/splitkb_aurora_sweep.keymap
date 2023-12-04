@@ -67,10 +67,10 @@
         // hypr_layer {
         //     bindings = <
     
-        //     &kp P        &kp C        &kp L         &kp M      &kp V                &kp X      &kp U       &kp O         &kp Y        &kp F
-        //     &mt LCTRL N  &kp S        &lt num R     &lt symr T &kp D                &kp DOT    &lt syml A  &lt vimnav E  &kp I        &mt RCTRL H
-        //     &mt LGUI B   &mt LSHFT G  &mt LALT QUOT &kp W      &kp Z                &kp COLON  &kp CMMA    &mt RALT Q    &mt RSHFT J  &mt RGUI K
-        //                                             &kp SPACE  &sk LSHIFT           &ad_rpt    &kp BSPC
+        //     &kp P        &kp C        &kp L          &kp M      &kp V                &kp X      &kp U       &kp O         &kp Y        &kp F
+        //     &mt LCTRL N  &kp S        &lt numb R     &lt symr T &kp D                &kp DOT    &lt syml A  &lt vimnav E  &kp I        &mt RCTRL H
+        //     &mt LGUI B   &mt LSHFT G  &mt LALT SQT   &kp W      &kp Z                &kp COLON  &kp COMMA    &mt RALT Q    &mt RSHFT J  &mt RGUI K
+        //                                             &kp SPACE  &sk LSHFT           &ad_rpt    &kp BSPC
                     
         //     >;
         // };
@@ -80,7 +80,7 @@
             bindings = <
                 &kp Q &kp W &kp F &kp P &kp B 					&kp J &kp L &kp U &kp Y &kp SLASH  
                 &kp A &kp R &kp S &kp T &kp G 			        	&kp M &kp N &kp E &kp I &kp O
-                &mt LC(LA(LSHIFT)) Z &mt LALT X &mt LCMD C &kp D &kp V    	&kp K &kp H &mt LCMD CMMA &lt vimnav A &mt LC(LA(LSHIFT)) QUOT
+                &mt LC(LA(LSHIFT)) Z &mt LALT X &mt LCMD C &kp D &kp V    	&kp K &kp H &mt LCMD COMMA &lt vimnav A &mt LC(LA(LSHIFT)) QUOT
                                 	&sk LSFT &mo_sl 1 1  	 		&mt RCTRL SPC &mo_sl 2 2
             >;
 		};
@@ -90,10 +90,10 @@
         strnk_layer {
             bindings = <
 
-            &kp F        &kp D        &kp L       &kp B       &kp V                &kp J      &kp G       &kp O          &kp U            &kp CMMA
-            &mt LCTRL S  &kp T        &lt num R   &lt symr N  &kp K                &kp Y      &lt syml M  &lt vimnav A   &kp E            &mt RCTRL I
-            &mt LGUI Z   &mt LSHFT Q  &mt LALT X  &kp H       &kp P                &kp W      &kp C       &mt RALT QUOT  &mt RSHFT COLON  &mt RGUI DOT
-                                                  &kp SPACE   &sk LSHIFT           &ad_rpt    &kp BSPC
+            &kp F        &kp D        &kp L       &kp B       &kp V                &kp J      &kp G       &kp O          &kp U            &kp COMMA
+            &mt LCTRL S  &kp T        &lt numb R  &lt symr N  &kp K                &kp Y      &lt syml M  &lt vimnav A   &kp E            &mt RCTRL I
+            &mt LGUI Z   &mt LSHFT Q  &mt LALT X  &kp H       &kp P                &kp W      &kp C       &mt RALT SQT  &mt RSHFT COLON  &mt RGUI DOT
+                                                  &kp SPACE   &sk LSHFT           &ad_rpt    &kp BSPC
                     
             >;
         };
