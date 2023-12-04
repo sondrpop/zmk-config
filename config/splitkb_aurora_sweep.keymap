@@ -64,17 +64,26 @@
         compatible = "zmk,keymap";
 
 
-        hypr_layer {
-            bindings = <
+        // hypr_layer {
+        //     bindings = <
     
-            &kp P        &kp C        &kp L         &kp M      &kp V                &kp X      &kp U       &kp O         &kp Y        &kp F
-            // &mt LCTRL N  &kp S        &lt num R     &lt symr T &kp D                &kp DOT    &lt syml A  &lt vimnav E  &kp I        &mt RCTRL H
-            &mt LCTRL N  &kp S        &lt num R     &lt symr T &kp D                &kp DOT    &kp A       &kp E         &kp I        &mt RCTRL H
-            &mt LGUI B   &mt LSHFT G  &mt LALT QUOT &kp W      &kp Z                &kp COLON  &kp CMMA    &mt RALT Q    &mt RSHFT J  &mt RGUI K
-                                                    &kp SPACE  &sk LSHIFT           &ad_rpt    &kp BSPC
+        //     &kp P        &kp C        &kp L         &kp M      &kp V                &kp X      &kp U       &kp O         &kp Y        &kp F
+        //     &mt LCTRL N  &kp S        &lt num R     &lt symr T &kp D                &kp DOT    &lt syml A  &lt vimnav E  &kp I        &mt RCTRL H
+        //     &mt LGUI B   &mt LSHFT G  &mt LALT QUOT &kp W      &kp Z                &kp COLON  &kp CMMA    &mt RALT Q    &mt RSHFT J  &mt RGUI K
+        //                                             &kp SPACE  &sk LSHIFT           &ad_rpt    &kp BSPC
                     
+        //     >;
+        // };
+
+
+        default_layer {
+            bindings = <
+                &kp Q &kp W &kp F &kp P &kp B 					&kp J &kp L &kp U &kp Y &kp SLASH  
+                &kp A &kp R &kp S &kp T &kp G 			        	&kp M &kp N &kp E &kp I &kp O
+                &mt LC(LA(LSHIFT)) Z &mt LALT X &mt LCMD C &kp D &kp V    	&kp K &kp H &mt LCMD CMMA &mt LALT DOT &mt LC(LA(LSHIFT)) QUOT
+                                	&sk LSFT &mo_sl 1 1  	 		&mt RCTRL SPC &mo_sl 2 2
             >;
-        };
+		};
             
 
 
