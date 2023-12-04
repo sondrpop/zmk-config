@@ -18,10 +18,6 @@
     chain-length = <23>;
 };
 
-&caps_word {
-    continue-list = <UNDERSCORE MINUS>;
-};
-
 &mt {
     // tapping-term-ms = <TAPPING_TERM>;
     // quick-tap-ms = <QUICK_TAP_TERM>;
@@ -49,7 +45,7 @@
         combo_ent {
             timeout-ms = <50>;
             key-positions = <16 32>;
-            bindings = <&kp RALT>;
+            bindings = <&kp RET >;
         };
     };
     behaviors {
@@ -72,7 +68,8 @@
             bindings = <
     
             &kp P        &kp C        &kp L         &kp M      &kp V                &kp X      &kp U       &kp O         &kp Y        &kp F
-            &mt LCTRL N  &kp S        &lt num R     &lt symr T &kp D                &kp DOT    &lt syml A  &lt vimnav E  &kp I        &mt RCTRL H
+            // &mt LCTRL N  &kp S        &lt num R     &lt symr T &kp D                &kp DOT    &lt syml A  &lt vimnav E  &kp I        &mt RCTRL H
+            &mt LCTRL N  &kp S        &lt num R     &lt symr T &kp D                &kp DOT    &kp A       &kp E         &kp I        &mt RCTRL H
             &mt LGUI B   &mt LSHFT G  &mt LALT QUOT &kp W      &kp Z                &kp COLON  &kp CMMA    &mt RALT Q    &mt RSHFT J  &mt RGUI K
                                                     &kp SPACE  &sk LSHIFT           &ad_rpt    &kp BSPC
                     
@@ -87,7 +84,7 @@
             &kp F        &kp D        &kp L       &kp B       &kp V                &kp J      &kp G       &kp O          &kp U            &kp CMMA
             &mt LCTRL S  &kp T        &lt num R   &lt symr N  &kp K                &kp Y      &lt syml M  &lt vimnav A   &kp E            &mt RCTRL I
             &mt LGUI Z   &mt LSHFT Q  &mt LALT X  &kp H       &kp P                &kp W      &kp C       &mt RALT QUOT  &mt RSHFT COLON  &mt RGUI DOT
-                                                &kp SPACE   &sk LSHIFT           &ad_rpt    &kp BSPC
+                                                  &kp SPACE   &sk LSHIFT           &ad_rpt    &kp BSPC
                     
             >;
         };
@@ -100,7 +97,7 @@
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT            &trans     &trans     &trans     &trans     &trans
             &kp TILDE  &kp GRAVE  &kp LBRC   &kp RBRC   &kp PIPE             &trans     &trans     &trans     &trans     &trans
             &kp BSLH   &kp SEMI   &kp LBKT   &kp RBKT   &kp QMARK            &trans     &trans     &trans     &trans     &trans
-                                            &trans     &trans               &trans     &trans
+                                             &trans     &trans               &trans     &trans
 
             >;
         };
@@ -113,7 +110,7 @@
             &trans     &trans     &trans     &trans     &trans               &kp CARET  &kp AMPS   &kp STAR   &kp PLUS   &kp EQUAL
             &trans     &trans     &trans     &trans     &trans               &kp MINUS  &kp LPAR   &kp RPAR   &kp SQT    &kp COLON
             &trans     &trans     &trans     &trans     &trans               &kp UNDER  &kp LT     &kp GT     &kp DQT    &kp SLASH
-                                            &trans     &trans               &trans     &trans
+                                             &trans     &trans               &trans     &trans
                     
             >;
         };
@@ -126,7 +123,7 @@
             &trans     &trans     &trans     &trans     &trans               &kp star   &kp N7     &kp N8     &kp N9     &kp PLUS
             &trans     &trans     &trans     &trans     &trans               &kp N0     &kp N4     &kp N5     &kp N6     &kp MINUS
             &trans     &trans     &trans     &trans     &trans               &kp SLASH  &kp N1     &kp N2     &kp N3     &kp EQUAL
-                                            &trans     &trans               &mo sym    &trans
+                                             &trans     &trans               &mo sym    &trans
 
             >;
         };
