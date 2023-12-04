@@ -28,6 +28,10 @@
     flavor = "tap-preferred";
 };
 
+&lt {
+    tapping-term-ms = <200>;
+};
+
 / {
 
     combos {
