@@ -48,6 +48,17 @@
             bindings = <&kp RALT>;
         };
     };
+    behaviors {
+        ad_rpt: adaptive_repeat {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "ADAPTIVE_REPEAT";
+            #binding-cells = <0>;
+			defaults = <&key_repeat>;
+            bindings = <&kp L>, <&kp I>;
+			antecedents = <R H>;
+			max-delay-ms = <250>;
+        };
+    };
 
     keymap {
 	compatible = "zmk,keymap";
@@ -59,7 +70,7 @@
         &kp P        &kp C        &kp L         &kp M      &kp V                &kp X      &kp U       &kp O         &kp Y        &kp F
         &mt LCTRL N  &kp S        &lt num R     &lt symr T &kp D                &kp DOT    &lt 2 A  &lt 5 E       &kp I        &mt R CTRL H
         &mt LGUI B   &mt LSHFT G  &mt LALT QUOT &kp W      &kp Z                &kp COLON  &kp CMMA    &mt RALT Q    &mt RSHFT J  &mt RGUI K
-                                                &kp SPACE  &sk LSHIFT           &kp N1     &kp BSPC
+                                                &kp SPACE  &sk LSHIFT           &ad_rpt    &kp BSPC
         		
 	    >;
         };
@@ -72,7 +83,7 @@
         &kp F        &kp D        &kp L       &kp B       &kp V                &kp J      &kp G       &kp O          &kp U            &kp CMMA
         &mt LCTRL S  &kp T        &lt num R   &lt symr N  &kp K                &kp Y      &lt syml M  &lt vimnav A   &kp E            &mt RCTRL I
         &mt LGUI Z   &mt LSHFT Q  &mt LALT X  &kp H       &kp P                &kp W      &kp C       &mt RALT QUOT  &mt RSHFT COLON  &mt RGUI DOT
-                                              &kp SPACE   &sk LSHIFT           &kp N2     &kp BSPC
+                                              &kp SPACE   &sk LSHIFT           &ad_rpt    &kp BSPC
         		
 	    >;
         };
