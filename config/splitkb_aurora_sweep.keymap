@@ -5,14 +5,13 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-#define hypr    0
-#define strnk   1
-#define syml    2
-#define symr    3
-#define numb    4
-#define vimnav  5
-#define fn      6
-#define sym     7
+#define strnk   0
+#define syml    1
+#define symr    2
+#define numb    3
+#define vimnav  4
+#define fn      5
+#define sym     6
 
 &led_strip {
     chain-length = <23>;
@@ -76,20 +75,6 @@
 
     keymap {
         compatible = "zmk,keymap";
-
-
-        hypr_layer {
-            bindings = <
-    
-            &kp P        &kp C        &kp L          &kp M      &kp V                &kp X      &kp U       &kp O         &kp Y        &kp F
-            &mt LCTRL N  &kp S        &lt numb R     &lt symr T &kp D                &kp DOT    &lt syml A  &lt vimnav E  &kp I        &mt RCTRL H
-            &mt LGUI B   &mt LSHFT G  &mt LALT SQT   &kp W      &kp Z                &kp COLON  &kp COMMA   &mt RALT Q    &mt RSHFT J  &mt RGUI K
-                                                     &kp SPACE  &sk LSHFT            &ad_rpt    &kp BSPC
-                    
-            >;
-        };
-            
-
 
         strnk_layer {
             bindings = <
