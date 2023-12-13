@@ -15,7 +15,7 @@
 #define sym     6
 
 &led_strip {
-    chain-length = <23>;
+    chain-length = <17>;
 };
 
 &mt {
