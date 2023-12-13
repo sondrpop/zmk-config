@@ -122,8 +122,8 @@
             label = "ADAPTIVE_MAGIC";
             #binding-cells = <0>;
 			defaults = <&none>;
-            bindings = <&kp O>, <&macro_efore>, <&kp Y>, <&kp Y>, <&kp U>, <&kp Y>, <&macro_on>, <&macro_ust>, <&kp S>, <&kp K>, <&macro_ent>, <&macro_ion>, <&kp A>, <&kp Y>, <&kp L>, <&kp K>, <&macro_ment>, <&kp E>, <&macro_er>, <&macro_hich>, <&macro_es>, <&kp P>;
-			antecedents = <A B C D E G I J K L M N O P R S T U V W X Y>;
+            bindings = <&kp O>, <&macro_efore>, <&kp Y>, <&kp Y>, <&kp U>, <&kp Y>, <&macro_on>, <&macro_ust>, <&kp S>, <&kp K>, <&macro_ent>, <&macro_ion>, <&kp A>, <&kp Y>, <&kp L>, <&kp K>, <&macro_ment>, <&kp E>, <&macro_er>, <&macro_hich>, <&macro_es>, <&kp P>, <&macro__but>, <&macro_the>;
+			antecedents = <A B C D E G I J K L M N O P R S T U V W X Y COMMA SPACE>;
 			max-delay-ms = <250>;
         };
         ad_rpt: adaptive_repeat {
@@ -131,8 +131,8 @@
             label = "ADAPTIVE_REPEAT";
             #binding-cells = <0>;
 			defaults = <&key_repeat>;
-            bindings = <&macro_nd>, <&macro_ng>, <&macro_ou>, <&kp F>, <&macro_ecause>, <&macro_ould>, <&macro_ould>;
-			antecedents = <A I Y N B W COMMA>;
+            bindings = <&macro_nd>, <&macro_ng>, <&macro_ou>, <&kp F>, <&macro_ecause>, <&macro_ould>, <&macro__and>, <&macro_for>;
+			antecedents = <A I Y N B W COMMA SPACE>;
 			max-delay-ms = <250>;
         };
     };
