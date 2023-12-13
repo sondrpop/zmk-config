@@ -45,12 +45,12 @@
         combo_ent {
             timeout-ms = <50>;
             key-positions = <16 32>;
-            bindings = <&kp RET >;
+            bindings = <&kp RET>;
         };
         combo_colon {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            bindings = <&kp COLON >;
+            bindings = <&kp COLON>;
         };
     };
 
@@ -131,8 +131,8 @@
             label = "ADAPTIVE_REPEAT";
             #binding-cells = <0>;
 			defaults = <&key_repeat>;
-            bindings = <&macro_nd>, <&macro_ng>, <&macro_ou>, <&kp F>, <&macro_ecause>, <&macro_ould>;
-			antecedents = <A I Y N B W>;
+            bindings = <&macro_nd>, <&macro_ng>, <&macro_ou>, <&kp F>, <&macro_ecause>, <&macro_ould>, <&macro_ould>;
+			antecedents = <A I Y N B W ,>;
 			max-delay-ms = <250>;
         };
     };
