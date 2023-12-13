@@ -80,78 +80,78 @@
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp I &kp O &kp N>;
-        );
+        )
         ZMK_MACRO(macro_ment,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp M &kp E &kp N &kp T>;
-        );
+        )
         ZMK_MACRO(macro_er,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp E &kp R>;
-        );
+        )
         ZMK_MACRO(macro_hich,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp H &kp I &kp C &kp H>;
-        );
+        )
         ZMK_MACRO(macro_es,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp E &kp S>;
-        );
+        )
         ZMK_MACRO(macro__but,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp SPACE &kp B &kp U &kp T>;
-        );
+        )
         ZMK_MACRO(macro_the,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp T &kp H &kp E>;
-        );
+        )
         // repeat key overrides
         ZMK_MACRO(macro_nd,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp N &kp D>;
-        );
+        )
         ZMK_MACRO(macro_ng,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp N &kp G>;
-        );
+        )
         ZMK_MACRO(macro_ou,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp O &kp U>;
-        );
+        )
         ZMK_MACRO(macro_ecause,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp E &kp C &kp C &kp A &kp U &kp S &kp E>;
-        );
+        )
         ZMK_MACRO(macro_ould,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp O &kp U &kp L &kp D>;
-        );
+        )
         ZMK_MACRO(macro__and,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp SPACE &kp A &kp N &kp D>;
-        );
+        )
         ZMK_MACRO(macro_org,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp O &kp R &kp G>;
-        );
+        )
         ZMK_MACRO(macro_for,
             wait-ms = <30>;
             tap-ms = <40>;
             bindings = <&kp F &kp O &kp R>;
-        );
+        )
     };
 
     behaviors {
