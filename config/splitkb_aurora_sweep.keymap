@@ -57,8 +57,6 @@
     macros {
         // magic key overrides
         ZMK_MACRO(macro_efore,
-            wait-ms = <30>;
-            tap-ms = <40>;
             bindings = <&kp E &kp F &kp O &kp R &kp E>;
         )
         ZMK_MACRO(macro_on,
