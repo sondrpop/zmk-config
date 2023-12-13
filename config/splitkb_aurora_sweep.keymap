@@ -161,7 +161,7 @@
             #binding-cells = <0>;
 			defaults = <&none>;
             bindings = <&kp O>, <&macro_efore>, <&kp Y>, <&kp Y>, <&kp U>, <&kp Y>, <&macro_on>, <&macro_ust>, <&kp S>, <&kp K>, <&macro_ent>, <&macro_ion>, <&kp A>, <&kp Y>, <&kp L>, <&kp K>, <&macro_ment>, <&kp E>, <&macro_er>, <&macro_hich>, <&macro_es>, <&kp P>;
-			antecedents = <A B C D E G I J K L M N O P R S T U V W X Y>; # 22
+			antecedents = <A B C D E G I J K L M N O P R S T U V W X Y>;
 			max-delay-ms = <250>;
         };
         ad_rpt: adaptive_repeat {
