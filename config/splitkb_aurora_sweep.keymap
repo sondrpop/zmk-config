@@ -73,57 +73,57 @@
         };
         macros {
             // magic key overrides
-            efore: efore {
+            macro_efore: macro_efore {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp E &kp F &kp O &kp R &kp E>;
             };
-            on: on {
+            macro_on: macro_on {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp O &kp N>;
             };
-            ust: ust {
+            macro_ust: macro_ust {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp U &kp S &kp T>;
             };
-            ent: ent {
+            macro_ent: macro_ent {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp E &kp N &kp T>;
             };
-            ion: ion {
+            macro_ion: macro_ion {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp I &kp O &kp N>;
             };
-            ment: ment {
+            macro_ment: macro_ment {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp M &kp E &kp N &kp T>;
             };
-            er: er {
+            macro_er: macro_er {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp E &kp R>;
             };
-            hich: hich {
+            macro_hich: macro_hich {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp H &kp I &kp C &kp H>;
             };
-            es: es {
+            macro_es: macro_es {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp E &kp S>;
             };
-            _but: _but {
+            macro__but: macro__but {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp SPACE &kp B &kp U &kp T>;
             };
-            the: the {
+            macro_the: macro_the {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp T &kp H &kp E>;
@@ -134,37 +134,37 @@
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp N &kp D>;
             };
-            ng: ng {
+            macro_ng: macro_ng {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp N &kp G>;
             };
-            ou: ou {
+            macro_ou: macro_ou {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp O &kp U>;
             };
-            ecause: ecause {
+            macro_ecause: macro_ecause {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp E &kp C &kp C &kp A &kp U &kp S &kp E>;
             };
-            ould: ould {
+            macro_ould: macro_ould {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp O &kp U &kp L &kp D>;
             };
-            _and: _and {
+            macro__and: macro__and {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp SPACE &kp A &kp N &kp D>;
             };
-            org: org {
+            macro_org: macro_org {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp O &kp R &kp G>;
             };
-            for: for {
+            macro_for: macro_for {
                 compatible = "zmk,behavior-macro";
                 #binding-cells = <0>;
                 bindings = <&macro_tap &kp F &kp O &kp R>;
