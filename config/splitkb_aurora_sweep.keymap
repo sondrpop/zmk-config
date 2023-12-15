@@ -49,7 +49,7 @@
         };
         combo_colon {
             timeout-ms = <50>;
-            key-positions = <16 17>;
+            key-positions = <15 16>;
             bindings = <&kp COLON>;
         };
     };
@@ -143,9 +143,9 @@
         strdy_layer {
             bindings = <
 
-            &kp V        &kp M        &kp L       &kp C       &kp P                &kp X      &kp F       &kp O          &kp U      &kp J
-            &mt LCTRL S  &kp T        &lt numb R  &lt symr D  &kp Y                &ad_mgc    &lt syml N  &lt vimnav A   &kp E      &mt RCTRL I
-            &mt LGUI Z   &kp K        &mt RSHFT Q &mt RALT G  &kp W                &kp B      &mt RALT H  &mt RSHFT DOT  &kp SQT    &mt RGUI COMMA
+            &kp V        &kp M        &kp L       &kp C       &kp P                &kp X      &kp F       &kp O          &kp U          &kp J
+            &kp S        &kp T        &lt numb R  &lt symr D  &kp Y                &ad_mgc    &lt syml N  &lt vimnav A   &kp E          &kp I
+            &mt LGUI Z   &mt LCTRL K  &mt LSHFT Q &mt LALT G  &kp W                &kp B      &mt RALT H  &mt RSHFT DOT  &mt RCTRL SQT  &mt RGUI COMMA
                                                   &sk LSHFT   &kp SPACE            &kp BSPC   &ad_rpt
                     
             >;
@@ -196,8 +196,8 @@
             bindings = <
 
             &kp N7        &kp N8        &kp N9       &trans     &kp V               &trans     &kp UP     &trans     &trans     &trans
-            &mt LCTRL N4  &kp N5        &kp N6       &kp N0     &kp D               &kp I      &kp LEFT   &trans     &kp RIGHT  &mt RCTRL A
-            &mt LGUI N1   &mt LSHFT N2  &mt LALT N3  &kp W      &trans              &trans     &kp DOWN   &kp RALT   &kp RSHFT  &kp RGUI
+            &kp N4        &kp N5        &kp N6       &kp N0     &kp D               &kp I      &kp LEFT   &trans     &kp RIGHT  &kp A
+            &mt LGUI N1   &mt LCTRL N2  &mt LSHFT N3 &mt LALT W &trans              &trans     &kp RALT   &kp RSHFT  &kp RCTRL  &kp RGUI
                                                      &trans     &trans              &mo sym    &trans
 
             >;
