@@ -6,7 +6,7 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/rgb.h>
 
-#define strnk   0
+#define strdy   0
 #define syml    1
 #define symr    2
 #define numb    3
@@ -140,13 +140,13 @@
     keymap {
         compatible = "zmk,keymap";
 
-        strnk_layer {
+        strdy_layer {
             bindings = <
 
             &kp V        &kp M        &kp L       &kp C       &kp P                &kp X      &kp F       &kp O          &kp U      &kp J
             &mt LCTRL S  &kp T        &lt numb R  &lt symr D  &kp Y                &ad_mgc    &lt syml N  &lt vimnav A   &kp E      &mt RCTRL I
             &mt LGUI Z   &kp K        &mt RSHFT Q &mt RALT G  &kp W                &kp B      &mt RALT H  &mt RSHFT DOT  &kp SQT    &mt RGUI COMMA
-                                                  &sk LSHFT   &kp SPACE            &ad_rpt    &kp BSPC
+                                                  &sk LSHFT   &kp SPACE            &kp BSPC   &ad_rpt
                     
             >;
         };
