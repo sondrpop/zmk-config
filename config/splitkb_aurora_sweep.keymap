@@ -157,8 +157,8 @@
             bindings = <
 
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT            &trans     &trans     &trans     &trans     &trans
-            &kp TILDE  &kp GRAVE  &kp LBRC   &kp RBRC   &kp PIPE             &trans     &trans     &trans     &trans     &trans
-            &kp BSLH   &kp SEMI   &kp LBKT   &kp RBKT   &kp QMARK            &trans     &trans     &trans     &trans     &trans
+            &kp TILDE  &kp GRAVE  &kp LBRC   &kp RBRC   &kp SLASH            &trans     &trans     &trans     &trans     &trans
+            &kp BSLH   &kp SEMI   &kp LBKT   &kp RBKT   &kp PIPE             &trans     &trans     &trans     &trans     &trans
                                              &trans     &trans               &trans     &trans
 
             >;
@@ -171,7 +171,7 @@
 
             &trans     &trans     &trans     &trans     &trans               &kp CARET  &kp AMPS   &kp STAR   &kp PLUS   &kp EQUAL
             &trans     &trans     &trans     &trans     &trans               &kp MINUS  &kp LPAR   &kp RPAR   &kp SQT    &kp COLON
-            &trans     &trans     &trans     &trans     &trans               &kp UNDER  &kp LT     &kp GT     &kp DQT    &kp SLASH
+            &trans     &trans     &trans     &trans     &trans               &kp UNDER  &kp LT     &kp GT     &kp DQT    &kp QMARK
                                              &trans     &trans               &trans     &trans
                     
             >;
@@ -222,8 +222,8 @@
             bindings = <
 
             &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT            &kp CARET  &kp AMPS   &kp STAR   &kp PLUS   &kp EQUAL
-            &kp TILDE  &kp GRAVE  &kp LBRC   &kp RBRC   &kp PIPE             &kp MINUS  &kp LPAR   &kp RPAR   &kp SQT    &kp COLON
-            &kp BSLH   &kp SEMI   &kp LBKT   &kp RBKT   &kp QMARK            &kp UNDER  &kp LT     &kp GT     &kp DQT    &kp SLASH
+            &kp TILDE  &kp GRAVE  &kp LBRC   &kp RBRC   &kp SLASH            &kp MINUS  &kp LPAR   &kp RPAR   &kp SQT    &kp COLON
+            &kp BSLH   &kp SEMI   &kp LBKT   &kp RBKT   &kp PIPE             &kp UNDER  &kp LT     &kp GT     &kp DQT    &kp QMARK
                                              &trans     &trans               &trans     &trans
 
             >;
