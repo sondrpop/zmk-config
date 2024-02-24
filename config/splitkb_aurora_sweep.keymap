@@ -13,6 +13,7 @@
 #define vimnav  4
 #define fn      5
 #define sym     6
+#define games   7
 
 &led_strip {
     chain-length = <17>;
@@ -197,7 +198,7 @@
 
             &kp N7        &kp N8        &kp N9       &trans     &kp V               &trans     &kp UP        &trans     &trans     &trans
             &kp N4        &kp N5        &kp N6       &kp N0     &kp D               &kp I      &kp LEFT      &trans     &kp RIGHT  &kp A
-            &mt LGUI N1   &mt LCTRL N2  &mt LSHFT N3 &mt LALT W &trans              &trans     &mt RALT DOWN &kp RSHFT  &kp RCTRL  &kp RGUI
+            &mt LGUI N1   &mt LCTRL N2  &mt LSHFT N3 &mt LALT W &trans              &trans     &mt RALT DOWNz &kp RSHFT  &kp RCTRL  &kp RGUI
                                                      &trans     &trans              &mo sym    &trans
 
             >;
@@ -211,7 +212,7 @@
             &kp LC(W)  &kp LC(T)  &trans     &kp LC(Z)  &kp LC(LS(Z))                &trans        &kp F7      &kp F8     &kp F9     &kp F10
             &kp LC(A)  &kp LC(S)  &trans     &kp LC(C)  &kp LC(V)                    &trans        &kp F4      &kp F5     &kp F6     &kp F11
             &kp LC(L)  &kp LC(F)  &trans     &kp LC(X)  &kp LC(O)                    &trans        &kp F1      &kp F2     &kp F3     &kp F12
-                                             &trans     &trans                       &rans         &trans
+                                             &trans     &trans                       &to games     &trans
 
             >;
         };
@@ -225,6 +226,17 @@
             &kp TILDE  &kp GRAVE  &kp LBRC   &kp RBRC   &kp SLASH            &kp MINUS  &kp LPAR   &kp RPAR   &kp SQT    &kp COLON
             &kp BSLH   &kp SEMI   &kp LBKT   &kp RBKT   &kp PIPE             &kp UNDER  &kp LT     &kp GT     &kp DQT    &kp QMARK
                                              &trans     &trans               &trans     &trans
+
+            >;
+        };
+
+        games_layer {
+            bindings = <
+            
+            &kp ESC      &kp Q      &kp W      &kp E      &kp R                &kp F1     &kp F2     &kp F3     &kp F4     &kp F5
+            &kp LSHIFT   &kp A      &kp S      &kp D      &kp F                &kp G      &kp H      &kp J      &kp K      &kp L
+            &kp LCTRL    &kp Z      &kp X      &kp C      &kp V                &kp B      &kp N      &kp M      &kp DQT    &kp QMARK
+                                               &kp LALT   &kp SPACE            &to strdy  &trans
 
             >;
         };
