@@ -148,64 +148,24 @@ MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
     };
 
     behaviors {
-        // ad_mgc: adaptive_magic {
-        //     compatible = "zmk,behavior-antecedent-morph";
-        //     label = "ADAPTIVE_MAGIC";
-        //     #binding-cells = <0>;
-		// 	defaults = <&none>;
-        //     bindings = <&kp O>, <&macro_efore>, <&kp Y>, <&kp Y>, <&kp U>, <&kp Y>, <&macro_on>, <&macro_ust>, <&kp S>, <&kp K>, <&macro_ent>, <&macro_ion>, <&kp A>, <&kp Y>, <&kp L>, <&kp K>, <&macro_ment>, <&kp E>, <&macro_er>, <&macro_hich>, <&macro_es>, <&kp P>;
-		// 	antecedents = <A B C D E G I J K L M N O P R S T U V W X Y>;
-		// 	max-delay-ms = <250>;
-        // };
-        // ad_rpt: adaptive_repeat {
-        //     compatible = "zmk,behavior-antecedent-morph";
-        //     label = "ADAPTIVE_REPEAT";
-        //     #binding-cells = <0>;
-		// 	defaults = <&key_repeat>;
-        //     bindings = <&macro_nd>, <&macro_ng>, <&macro_ou>, <&kp F>, <&macro_ecause>, <&macro_ould>, <&kp K>;
-		// 	antecedents = <A I Y N B W C>;
-		// 	max-delay-ms = <250>;
-        // };
-        // hrl: left_positional_hold_tap {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "LEFT_POSITIONAL_HOLD_TAP";
-        //     #binding-cells = <2>;
-        //     flavor = "tap-unless-interrupted";
-        //     tapping-term-ms = <280>;
-        //     quick-tap-ms = <175>;
-        //     bindings = <&kp>, <&kp>;
-        //     hold-trigger-key-positions = <KEYS_R>;
-        // };
-        // hrr: right_positional_hold_tap {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "RIGHT_POSITIONAL_HOLD_TAP";
-        //     #binding-cells = <2>;
-        //     flavor = "tap-unless-interrupted";
-        //     tapping-term-ms = <280>;
-        //     quick-tap-ms = <175>;
-        //     bindings = <&kp>, <&kp>;
-        //     hold-trigger-key-positions = <KEYS_L>;
-        // };
-        // hll: left_positional_layer_tap {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "LEFT_POSITIONAL_LAYER_TAP";
-        //     #binding-cells = <2>;
-        //     flavor = "tap-unless-interrupted";
-        //     tapping-term-ms = <280>;
-        //     quick-tap-ms = <175>;
-        //     bindings = <&mo>, <&kp>;
-        //     hold-trigger-key-positions = <KEYS_R>;
-        // };
-        // hlr: right_positional_layer_tap {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "RIGHT_POSITIONAL_LAYER_TAP";
-        //     #binding-cells = <2>;
-        //     flavor = "tap-unless-interrupted";
-        //     tapping-term-ms = <280>;
-        //     quick-tap-ms = <175>;
-        //     bindings = <&mo>, <&kp>;
-        //     hold-trigger-key-positions = <KEYS_L>;
-        // };
+        ad_mgc: adaptive_magic {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "ADAPTIVE_MAGIC";
+            #binding-cells = <0>;
+			defaults = <&none>;
+            bindings = <&kp O>, <&macro_efore>, <&kp Y>, <&kp Y>, <&kp U>, <&kp Y>, <&macro_on>, <&macro_ust>, <&kp S>, <&kp K>, <&macro_ent>, <&macro_ion>, <&kp A>, <&kp Y>, <&kp L>, <&kp K>, <&macro_ment>, <&kp E>, <&macro_er>, <&macro_hich>, <&macro_es>, <&kp P>;
+			antecedents = <A B C D E G I J K L M N O P R S T U V W X Y>;
+			max-delay-ms = <250>;
+        };
+        ad_rpt: adaptive_repeat {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "ADAPTIVE_REPEAT";
+            #binding-cells = <0>;
+			defaults = <&key_repeat>;
+            bindings = <&macro_nd>, <&macro_ng>, <&macro_ou>, <&kp F>, <&macro_ecause>, <&macro_ould>, <&kp K>;
+			antecedents = <A I Y N B W C>;
+			max-delay-ms = <250>;
+        };
     };
 
     keymap {
@@ -215,22 +175,12 @@ MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
             bindings = <
 
             &kp V     &kp M        &kp L        &kp C        &kp P                &kp X      &kp F        &kp O       &kp U        &kp J
-            &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &kp SEMI   &hrr RGUI N  &hrr RALT A &hrr RCTRL E &kp I
+            &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &ad_mgc    &hrr RGUI N  &hrr RALT A &hrr RCTRL E &kp I
             &kp Z     &kp K        &hll numb Q  &hll symr G  &kp W                &kp B      &hlr syml H  &kp DOT     &kp SQT      &kp COMMA
-                                                &sk LSHFT    &kp SPACE            &kp BSPC   &key_repeat
+                                                &sk LSHFT    &kp SPACE            &kp BSPC   &ad_rpt
                     
             >;
         };
-        // strdy_layer {
-        //     bindings = <
-
-        //     &kp V        &kp M        &kp L        &kp C        &kp P                &kp X      &kp F        &kp O           &kp U          &kp J
-        //     &kp S        &kp T        &hrl numb R  &hrl symr D  &kp Y                &ad_mgc    &hrr syml N  &hrr vimnav A   &kp E          &kp I
-        //     &hrl LGUI Z  &hrl LCTRL K &hrl LSHFT Q &hrl LALT G  &kp W                &kp B      &hrr RALT H  &hrr RSHFT DOT  &hrr RCTRL SQT &hrr RGUI COMMA
-        //                                            &sk LSHFT    &kp SPACE            &kp BSPC   &ad_rpt
-                    
-        //     >;
-        // };
 
 
         syml_layer {
