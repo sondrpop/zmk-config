@@ -38,8 +38,8 @@
 MAKE_HRM(hrl, hold_tap, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hrr, hold_tap, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
-MAKE_HRM(hrtl, layer_tap, &kp, &kp, KEYS_R THUMBS)  // left-hand layer-taps
-MAKE_HRM(hrtr, layer_tap, &kp, &kp, KEYS_L THUMBS)  // right-hand layer-taps
+// MAKE_HRM(hrtl, layer_tap, &kp, &kp, KEYS_R THUMBS)  // left-hand layer-taps
+// MAKE_HRM(hrtr, layer_tap, &kp, &kp, KEYS_L THUMBS)  // right-hand layer-taps
 
 // MAKE_HRM(hrm_l_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 // MAKE_HRM(hrm_r_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
