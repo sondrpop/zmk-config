@@ -145,24 +145,24 @@ MAKE_HRM(hrr, hold_tap, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
     };
 
     behaviors {
-        ad_mgc: adaptive_magic {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "ADAPTIVE_MAGIC";
-            #binding-cells = <0>;
-			defaults = <&none>;
-            bindings = <&kp O>, <&macro_efore>, <&kp Y>, <&kp Y>, <&kp U>, <&kp Y>, <&macro_on>, <&macro_ust>, <&kp S>, <&kp K>, <&macro_ent>, <&macro_ion>, <&kp A>, <&kp Y>, <&kp L>, <&kp K>, <&macro_ment>, <&kp E>, <&macro_er>, <&macro_hich>, <&macro_es>, <&kp P>;
-			antecedents = <A B C D E G I J K L M N O P R S T U V W X Y>;
-			max-delay-ms = <250>;
-        };
-        ad_rpt: adaptive_repeat {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "ADAPTIVE_REPEAT";
-            #binding-cells = <0>;
-			defaults = <&key_repeat>;
-            bindings = <&macro_nd>, <&macro_ng>, <&macro_ou>, <&kp F>, <&macro_ecause>, <&macro_ould>, <&kp K>;
-			antecedents = <A I Y N B W C>;
-			max-delay-ms = <250>;
-        };
+        // ad_mgc: adaptive_magic {
+        //     compatible = "zmk,behavior-antecedent-morph";
+        //     label = "ADAPTIVE_MAGIC";
+        //     #binding-cells = <0>;
+		// 	defaults = <&none>;
+        //     bindings = <&kp O>, <&macro_efore>, <&kp Y>, <&kp Y>, <&kp U>, <&kp Y>, <&macro_on>, <&macro_ust>, <&kp S>, <&kp K>, <&macro_ent>, <&macro_ion>, <&kp A>, <&kp Y>, <&kp L>, <&kp K>, <&macro_ment>, <&kp E>, <&macro_er>, <&macro_hich>, <&macro_es>, <&kp P>;
+		// 	antecedents = <A B C D E G I J K L M N O P R S T U V W X Y>;
+		// 	max-delay-ms = <250>;
+        // };
+        // ad_rpt: adaptive_repeat {
+        //     compatible = "zmk,behavior-antecedent-morph";
+        //     label = "ADAPTIVE_REPEAT";
+        //     #binding-cells = <0>;
+		// 	defaults = <&key_repeat>;
+        //     bindings = <&macro_nd>, <&macro_ng>, <&macro_ou>, <&kp F>, <&macro_ecause>, <&macro_ould>, <&kp K>;
+		// 	antecedents = <A I Y N B W C>;
+		// 	max-delay-ms = <250>;
+        // };
         // hrl: left_positional_hold_tap {
         //     compatible = "zmk,behavior-hold-tap";
         //     label = "LEFT_POSITIONAL_HOLD_TAP";
@@ -212,9 +212,9 @@ MAKE_HRM(hrr, hold_tap, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
             bindings = <
 
             &kp V     &kp M        &kp L        &kp C        &kp P                &kp X      &kp F        &kp O       &kp U        &kp J
-            &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &ad_mgc    &hrr RGUI N  &hrr RALT A &hrr RCTRL E &kp I
+            &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &kp SEMI   &hrr RGUI N  &hrr RALT A &hrr RCTRL E &kp I
             &kp Z     &kp K        &hrl numb Q  &hrl symr G  &kp W                &kp B      &hrr syml H  &kp DOT     &kp SQT      &kp COMMA
-                                                &sk LSHFT    &kp SPACE            &kp BSPC   &ad_rpt
+                                                &sk LSHFT    &kp SPACE            &kp BSPC   &key_repeat
                     
             >;
         };
