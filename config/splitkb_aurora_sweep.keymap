@@ -25,7 +25,7 @@
 #define THUMBS LH1 LH0 RH0 RH1                                      // thumbs
 
 #define MAKE_HRM(NAME, MOD_TYPE, HOLD, TAP, TRIGGER_POS) \
-    ZMK_BEHAVIOR(NAME, <MOD_TYPE>, \
+    ZMK_BEHAVIOR(NAME, MOD_TYPE, \
         flavor = "balanced"; \
         tapping-term-ms = <280>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
@@ -176,7 +176,7 @@ MAKE_HRM(hrtr, layer_tap, &kp, &kp, KEYS_L THUMBS)  // right-hand layer-taps
 
             &kp V     &kp M        &kp L        &kp C        &kp P                &kp X      &kp F        &kp O       &kp U        &kp J
             &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &ad_mgc    &hrr RGUI N  &hrr RALT A &hrr RCTRL E &kp I
-            &kp Z     &kp K        &hrtr numb Q &hrtl symr G &kp W                &kp B      &hrtr syml H &kp DOT     &kp SQT      &kp COMMA
+            &kp Z     &kp K        &hrtl numb Q &hrtl symr G &kp W                &kp B      &hrtr syml H &kp DOT     &kp SQT      &kp COMMA
                                                 &sk LSHFT    &kp SPACE            &kp BSPC   &ad_rpt
                     
             >;
