@@ -24,8 +24,8 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right hand
 #define THUMBS LH1 LH0 RH0 RH1                                      // thumbs
 
-#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
-    ZMK_BEHAVIOR(NAME, hold_tap, \
+#define MAKE_HRM(NAME, MOD_TYPE, HOLD, TAP, TRIGGER_POS) \
+    ZMK_BEHAVIOR(NAME, <MOD_TYPE>, \
         flavor = "balanced"; \
         tapping-term-ms = <280>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
@@ -35,8 +35,11 @@
         hold-trigger-on-release; \
     )
 
-MAKE_HRM(hrl, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
-MAKE_HRM(hrr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
+MAKE_HRM(hrl, hold_tap, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
+MAKE_HRM(hrr, hold_tap, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
+
+MAKE_HRM(hrtl, layer_tap, &kp, &kp, KEYS_R THUMBS)  // left-hand layer-taps
+MAKE_HRM(hrtr, layer_tap, &kp, &kp, KEYS_L THUMBS)  // right-hand layer-taps
 
 // MAKE_HRM(hrm_l_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 // MAKE_HRM(hrm_r_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
@@ -50,9 +53,10 @@ MAKE_HRM(hrr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 };
 
 &lt {
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
+    flavor = "tap-preferred";
+    tapping-term-ms = <220>;
+    quick-tap-ms = <220>;
+    hold-trigger-key-positions = <0>;
 };
 
 / {
@@ -170,10 +174,10 @@ MAKE_HRM(hrr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
         strdy_layer {
             bindings = <
 
-            &kp V        &kp M        &kp L        &kp C        &kp P                &kp X      &kp F        &kp O           &kp U          &kp J
-            &hrl LGUI S  &hrl LCTRL T &hrl LSHFT R &hrl LALT D  &kp Y                &ad_mgc    &hrr RALT N  &hrr RSHFT A    &hrr RCTRL E   &hrr RGUI I
-            &kp Z        &kp K        &kp Q        &kp G        &kp W                &kp B      &kp H        &kp DOT         &kp SQT        &kp COMMA
-                                                   &sk LSHFT    &kp SPACE            &kp BSPC   &ad_rpt
+            &kp V     &kp M        &kp L        &kp C        &kp P                &kp X      &kp F        &kp O       &kp U        &kp J
+            &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &ad_mgc    &hrr RGUI N  &hrr RALT A &hrr RCTRL E &kp I
+            &kp Z     &kp K        &hrtr numb Q &hrtl symr G &kp W                &kp B      &hrtr syml H &kp DOT     &kp SQT      &kp COMMA
+                                                &sk LSHFT    &kp SPACE            &kp BSPC   &ad_rpt
                     
             >;
         };
