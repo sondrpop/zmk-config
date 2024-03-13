@@ -24,22 +24,19 @@
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right hand
 #define THUMBS LH1 LH0 RH0 RH1                                      // thumbs
 
-// #define MAKE_HRM(NAME, MOD_TYPE, HOLD, TAP, TRIGGER_POS) \
-//     ZMK_BEHAVIOR(NAME, MOD_TYPE, \
-//         flavor = "balanced"; \
-//         tapping-term-ms = <280>; \
-//         quick-tap-ms = <QUICK_TAP_MS>; \ 
-//         require-prior-idle-ms = <150>; \
-//         bindings = <HOLD>, <TAP>; \
-//         hold-trigger-key-positions = <TRIGGER_POS>; \
-//         hold-trigger-on-release; \
-//     )
+#define MAKE_HRM(NAME, MOD_TYPE, HOLD, TAP, TRIGGER_POS) \
+    ZMK_BEHAVIOR(NAME, MOD_TYPE, \
+        flavor = "balanced"; \
+        tapping-term-ms = <280>; \
+        quick-tap-ms = <QUICK_TAP_MS>; \ 
+        require-prior-idle-ms = <150>; \
+        bindings = <HOLD>, <TAP>; \
+        hold-trigger-key-positions = <TRIGGER_POS>; \
+        hold-trigger-on-release; \
+    )
 
-// MAKE_HRM(hrl, hold_tap, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
-// MAKE_HRM(hrr, hold_tap, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
-
-// MAKE_HRM(hrtl, layer_tap, &kp, &kp, KEYS_R THUMBS)  // left-hand layer-taps
-// MAKE_HRM(hrtr, layer_tap, &kp, &kp, KEYS_L THUMBS)  // right-hand layer-taps
+MAKE_HRM(hrl, hold_tap, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
+MAKE_HRM(hrr, hold_tap, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 // MAKE_HRM(hrm_l_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 // MAKE_HRM(hrm_r_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
@@ -166,46 +163,46 @@
 			antecedents = <A I Y N B W C>;
 			max-delay-ms = <250>;
         };
-        hrl: left_positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_POSITIONAL_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R>;
-        };
-        hrr: right_positional_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_POSITIONAL_HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L>;
-        };
-        hll: left_positional_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_POSITIONAL_LAYER_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R>;
-        };
-        hlr: right_positional_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RIGHT_POSITIONAL_LAYER_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&mo>, <&kp>; // this isn't working
-            hold-trigger-key-positions = <KEYS_L>;
-        };
+        // hrl: left_positional_hold_tap {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "LEFT_POSITIONAL_HOLD_TAP";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-unless-interrupted";
+        //     tapping-term-ms = <280>;
+        //     quick-tap-ms = <175>;
+        //     bindings = <&kp>, <&kp>;
+        //     hold-trigger-key-positions = <KEYS_R>;
+        // };
+        // hrr: right_positional_hold_tap {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "RIGHT_POSITIONAL_HOLD_TAP";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-unless-interrupted";
+        //     tapping-term-ms = <280>;
+        //     quick-tap-ms = <175>;
+        //     bindings = <&kp>, <&kp>;
+        //     hold-trigger-key-positions = <KEYS_L>;
+        // };
+        // hll: left_positional_layer_tap {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "LEFT_POSITIONAL_LAYER_TAP";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-unless-interrupted";
+        //     tapping-term-ms = <280>;
+        //     quick-tap-ms = <175>;
+        //     bindings = <&mo>, <&kp>;
+        //     hold-trigger-key-positions = <KEYS_R>;
+        // };
+        // hlr: right_positional_layer_tap {
+        //     compatible = "zmk,behavior-hold-tap";
+        //     label = "RIGHT_POSITIONAL_LAYER_TAP";
+        //     #binding-cells = <2>;
+        //     flavor = "tap-unless-interrupted";
+        //     tapping-term-ms = <280>;
+        //     quick-tap-ms = <175>;
+        //     bindings = <&mo>, <&kp>;
+        //     hold-trigger-key-positions = <KEYS_L>;
+        // };
     };
 
     keymap {
@@ -216,7 +213,7 @@
 
             &kp V     &kp M        &kp L        &kp C        &kp P                &kp X      &kp F        &kp O       &kp U        &kp J
             &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &ad_mgc    &hrr RGUI N  &hrr RALT A &hrr RCTRL E &kp I
-            &kp Z     &kp K        &hll numb Q  &hll symr G  &kp W                &kp B      &hlr syml H  &kp DOT     &kp SQT      &kp COMMA
+            &kp Z     &kp K        &hrl numb Q  &hrl symr G  &kp W                &kp B      &hrr syml H  &kp DOT     &kp SQT      &kp COMMA
                                                 &sk LSHFT    &kp SPACE            &kp BSPC   &ad_rpt
                     
             >;
