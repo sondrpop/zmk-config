@@ -194,7 +194,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L>;
+            hold-trigger-key-positions = <KEYS_R>;
         };
         hlr: right_positional_layer_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -203,8 +203,8 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
-            bindings = <&mo>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R>;
+            bindings = <&mo>, <&kp>; // this isn't working
+            hold-trigger-key-positions = <KEYS_L>;
         };
     };
 
