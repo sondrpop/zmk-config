@@ -2,12 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: voidyourwarranty2
-      url-base: https://github.com/voidyourwarranty2
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
-      remote: voidyourwarranty2
-      revision: devel-adaptive
+      remote: urob
+      revision: main
       import: app/west.yml
   self:
     path: config
