@@ -239,7 +239,7 @@ MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
 
             &trans      &trans      &trans     &trans       &trans                       &bt BT_PRV     &kp F7      &kp F8     &kp F9     &kp F10
             &trans      &trans      &trans     &out OUT_USB &trans                       &bt BT_NXT     &kp F4      &kp F5     &kp F6     &kp F11
-            &trans      &trans      &trans     &out OUT_BLE &trans                       &bt BT_CLR_ALL &kp F1      &kp F2     &kp F3     &kp F12
+            &trans      &trans      &trans     &out OUT_BLE &trans                       &bt BT_CLR     &kp F1      &kp F2     &kp F3     &kp F12
                                                &trans       &trans                       &to games      &trans
 
             >;
