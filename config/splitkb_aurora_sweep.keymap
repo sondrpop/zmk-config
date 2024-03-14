@@ -11,7 +11,7 @@
 #define syml    1
 #define symr    2
 #define numb    3
-#define vimnav  4
+#define nav  4
 #define fn      5
 #define sym     6
 #define games   7
@@ -174,9 +174,9 @@ MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
         strdy_layer {
             bindings = <
 
-            &kp V     &kp M        &kp L        &kp C        &kp P                &kp X      &kp F        &kp O       &kp U        &kp J
-            &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &ad_mgc    &hrr RGUI N  &hrr RALT A &hrr RCTRL E &kp I
-            &kp Z     &kp K        &hll numb Q  &hll symr G  &kp W                &kp B      &hlr syml H  &kp DOT     &kp SQT      &kp COMMA
+            &kp V     &kp M        &kp L        &kp C        &kp P                &kp X      &kp F        &kp O           &kp U        &kp J
+            &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &ad_mgc    &hrr RGUI N  &hrr RALT A     &hrr RCTRL E &kp I
+            &kp Z     &kp K        &hll numb Q  &hll symr G  &kp W                &kp B      &hlr syml H  &hlr nav DOT    &kp SQT      &kp COMMA
                                                 &sk LSHFT    &kp SPACE            &kp BSPC   &ad_rpt
                     
             >;
@@ -222,13 +222,13 @@ MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
 
 
 
-        vimnav_layer {
+        nav_layer {
             bindings = <
 
-            &kp N7        &kp N8        &kp N9        &trans      &kp V               &trans     &kp UP         &trans     &trans     &trans
-            &kp N4        &kp N5        &kp N6        &kp N0      &kp D               &kp I      &kp LEFT       &trans     &kp RIGHT  &kp A
-            &hrl LGUI N1  &hrl LCTRL N2 &hrl LSHFT N3 &hrl LALT W &trans              &trans     &hrr RALT DOWN &kp RSHFT  &kp RCTRL  &kp RGUI
-                                                      &trans      &trans              &mo sym    &trans
+            &trans        &trans        &kp UP        &trans      &trans              &trans     &trans     &trans     &trans     &trans
+            &trans        &kp LEFT      &kp DOWN      &kp RIGHT   &trans              &trans     &kp RGUI   &kp RALT   &kp RCTRL  &trans
+            &trans        &trans        &trans        &trans      &trans              &trans     &trans     &trans     &trans     &trans
+                                                      &trans      &trans              &trans     &trans
 
             >;
         };
