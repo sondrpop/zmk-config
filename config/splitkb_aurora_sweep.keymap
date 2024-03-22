@@ -38,14 +38,14 @@
 MAKE_HRM(hrl, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hrr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
-MAKE_HRM(hll, &mo, &kp, KEYS_R THUMBS)  // left-hand layer tap HRMs 
+MAKE_HRM(hll, &mo, &kp, KEYS_R THUMBS)  // left-hand layer tap HRMs
 MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
 
 // MAKE_HRM(hrm_l_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 // MAKE_HRM(hrm_r_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
 // MAKE_HRM(hrm_r_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
-&mt { 
+&mt {
     flavor = "tap-preferred";
     tapping-term-ms = <220>;
     quick-tap-ms = <220>;
@@ -100,8 +100,8 @@ MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
             &kp V     &kp M        &kp L        &kp C        &kp P                &kp X      &kp F        &kp O           &kp U        &kp J
             &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &kp X      &hrr RGUI N  &hrr RALT A     &hrr RCTRL E &kp I
             &kp Z     &kp K        &hll numb Q  &hll symr G  &kp W                &kp B      &hlr syml H  &hlr nav DOT    &kp SQT      &kp COMMA
-                                          &sk LSHFT &kp SPACE                     &kp BSPC   &key_repeat
-                    
+                                                &sk LSHFT    &kp SPACE            &kp BSPC   &key_repeat
+
             >;
         };
 
@@ -126,7 +126,7 @@ MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
             &trans     &trans     &trans     &trans     &trans               &kp MINUS  &kp LPAR   &kp RPAR   &kp SQT    &kp COLON
             &trans     &trans     &trans     &trans     &trans               &kp UNDER  &kp LT     &kp GT     &kp DQT    &kp QMARK
                                              &trans     &trans               &trans     &trans
-                    
+
             >;
         };
 
