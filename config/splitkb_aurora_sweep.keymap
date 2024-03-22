@@ -29,11 +29,20 @@
         flavor = "balanced"; \
         tapping-term-ms = <280>; \
         quick-tap-ms = <QUICK_TAP_MS>; \
-        require-prior-idle-ms = <150>; \
         bindings = <HOLD>, <TAP>; \
         hold-trigger-key-positions = <TRIGGER_POS>; \
         hold-trigger-on-release; \
     )
+// #define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
+//     ZMK_BEHAVIOR(NAME, hold_tap, \
+//         flavor = "balanced"; \
+//         tapping-term-ms = <280>; \
+//         quick-tap-ms = <QUICK_TAP_MS>; \
+//         require-prior-idle-ms = <150>; \
+//         bindings = <HOLD>, <TAP>; \
+//         hold-trigger-key-positions = <TRIGGER_POS>; \
+//         hold-trigger-on-release; \
+//     )
 
 MAKE_HRM(hrl, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hrr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
@@ -97,10 +106,10 @@ MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
         strdy_layer {
             bindings = <
 
-            &kp V     &kp M        &kp L        &kp C        &kp P                &kp X      &kp F        &kp O           &kp U        &kp J
-            &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &kp X      &hrr RGUI N  &hrr RALT A     &hrr RCTRL E &kp I
-            &kp Z     &kp K        &hll numb Q  &hll symr G  &kp W                &kp B      &hlr syml H  &hlr nav DOT    &kp SQT      &kp COMMA
-                                                &sk LSHFT    &kp SPACE            &kp BSPC   &key_repeat
+            &kp V     &kp M        &kp L        &kp C        &kp P                &kp X       &kp F        &kp O           &kp U        &kp J
+            &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &key_repeat &hrr RGUI N  &hrr RALT A     &hrr RCTRL E &kp I
+            &kp Z     &kp K        &hll numb Q  &hll symr G  &kp W                &kp B       &hlr syml H  &hlr nav DOT    &kp SQT      &kp COMMA
+                                                &sk LSHFT    &kp SPACE            &kp BSPC    &leader
 
             >;
         };
