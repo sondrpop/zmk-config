@@ -50,10 +50,6 @@ MAKE_HRM(hrr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 MAKE_HRM(hll, &mo, &kp, KEYS_R THUMBS)  // left-hand layer tap HRMs
 MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
 
-// MAKE_HRM(hrm_l_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
-// MAKE_HRM(hrm_r_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
-// MAKE_HRM(hrm_r_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
-
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <220>;
@@ -68,30 +64,122 @@ MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
     hold-trigger-key-positions = <0>;
 };
 
+#define COMBOS_TERM 50
+#define BASE_COMBOS_MACRO(POSITION1, POSITION2, BINDING) \
+thumbcombos_ ## LAYER ## _ ## POSITION1 { \
+  layers = <0>; \
+  key-positions = <POSITION1 ## POSITION2>; \
+  bindings = <BINDING>; \
+  timeout-ms = <COMBOS_TERM>; \
+};
+
 / {
 
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-        combo_tab {
-            timeout-ms = <50>;
-            key-positions = <13 31>;
-            bindings = <&kp TAB>;
-        };
-        combo_ent {
-            timeout-ms = <50>;
-            key-positions = <16 32>;
-            bindings = <&kp RET>;
-        };
-        combo_colon {
-            timeout-ms = <50>;
-            key-positions = <15 16>;
-            bindings = <&kp COLON>;
-        };
+    // combos {
+    //     COMBOS_MACRO(0, LEFT, &lt U_FUN DEL)
+    //     compatible = "zmk,combos";
+    //     // comments use main layout to more easily indicate combo key locations
+    //     // tab: d,space
+    //     combo_tab {
+    //         timeout-ms = <50>;
+    //         key-positions = <13 31>;
+    //         bindings = <&kp TAB>;
+    //     };
+    //     // enter: [bspc],n
+    //     combo_ent {
+    //         timeout-ms = <50>;
+    //         key-positions = <16 32>;
+    //         bindings = <&kp RET>;
+    //     };
+    //     // --- HOME ROW: LEFT TO RIGHT ---//
+    //     // left square bracket: s,t
+    //     combo_lbracket {
+    //         timeout-ms = <50>;
+    //         key-positions = <10 11>;
+    //         bindings = <&kp LBKT>;
+    //     };
+    //     // left curly brace: t,r
+    //     combo_lbrace {
+    //         timeout-ms = <50>;
+    //         key-positions = <11 12>;
+    //         bindings = <&kp LBRC>;
+    //     };
+    //     // left parenthesis: r,d
+    //     combo_lparen {
+    //         timeout-ms = <50>;
+    //         key-positions = <12 13>;
+    //         bindings = <&kp LPAR>;
+    //     };
+    //     // equals: d,y
+    //     combo_eqls {
+    //         timeout-ms = <50>;
+    //         key-positions = <13 14>;
+    //         bindings = <&kp EQUAL>;
+    //     };
+    //     // colon: repeat,n
+    //     combo_colon {
+    //         timeout-ms = <50>;
+    //         key-positions = <15 16>;
+    //         bindings = <&kp COLON>;
+    //     };
+    //     // right parenthesis: n,a
+    //     combo_rparen {
+    //         timeout-ms = <50>;
+    //         key-positions = <16 17>;
+    //         bindings = <&kp RPAR>;
+    //     };
+    //     // right curly brace: t,r
+    //     combo_rbrace {
+    //         timeout-ms = <50>;
+    //         key-positions = <17 18>;
+    //         bindings = <&kp RBRC>;
+    //     };
+    //     // right square bracket: s,t
+    //     combo_rbracket {
+    //         timeout-ms = <50>;
+    //         key-positions = <18 19>;
+    //         bindings = <&kp RBKT>;
+    //     };
+
+    //     //---TOP ROW: LEFT TO RIGHT---//
+    //     // escape: v,m
+    //     combo_esc {
+    //         timeout-ms = <50>;
+    //         key-positions = <1 2>;
+    //         bindings = <&kp ESC>;
+    //     };
+    //     // undo: m,l
+    //     combo_undo {
+    //         timeout-ms = <50>;
+    //         key-positions = <2 3>;
+    //         bindings = <&kp LBKT>;
+    //     };
+    //     // copy: l,c
+    //     combo_copy {
+    //         timeout-ms = <50>;
+    //         key-positions = <3 4>;
+    //         bindings = <&kp LBRC>;
+    //     };
+    //     // cut: c,p
+    //     combo_cut {
+    //         timeout-ms = <50>;
+    //         key-positions = <4 5>;
+    //         bindings = <&kp LPAR>;
+    //     };
+    //     // (()=>{ : x,f
+    //     combo_callback {
+    //         timeout-ms = <50>;
+    //         key-positions = <5 6>;
+    //         bindings = <&kp EQUAL>;
+    //     };
+    //     // paste: f,o
+    //     combo_callback {
+    //         timeout-ms = <50>;
+    //         key-positions = <5 6>;
+    //         bindings = <&kp EQUAL>;
+    //     };
+    //     // redo: o,u
+    //     // => : u,j
     };
 
     macros {
@@ -113,9 +201,13 @@ MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
 
         strdy_layer {
             bindings = <
-
+//     combos: [   esc   ] [   undo   ] [   copy   ] [   cut   ]                    [ (()=>{ ]  [   pste   ]  [   redo   ]  [   =>   ]
             &kp V     &kp M        &kp L        &kp C        &kp P                &kp X       &kp F        &kp O           &kp U        &kp J
+
+//     combos:   [   [   ]    [   {   ]    [   (   ]    [   =   ]                        [   :   ]    [   )   ]       [   }   ]    [   ]   ]
             &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &key_repeat &hrr RGUI N  &hrr RALT A     &hrr RCTRL E &kp I
+
+//     combos:   [       ]    [       ]    [       ]    [       ]                        [       ]    [       ]       [       ]    [       ]
             &kp Z     &kp K        &hll numb Q  &hll symr G  &kp W                &kp B       &hlr syml H  &hlr nav DOT    &kp SQT      &kp COMMA
                                                 &sk LSHFT    &kp SPACE            &kp BSPC    &leader
 
