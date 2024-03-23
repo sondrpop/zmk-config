@@ -76,8 +76,8 @@ thumbcombos_ ## LAYER ## _ ## POSITION1 { \
 / {
 
     combos {
-        COMBOS_MACRO(0, 1, &kp TAB)
-    //     compatible = "zmk,combos";
+        compatible = "zmk,combos";
+        COMBOS_MACRO(0, 1, &kp TAB);
     //     // comments use main layout to more easily indicate combo key locations
     //     // tab: d,space
     //     combo_tab {
