@@ -180,7 +180,7 @@ thumbcombos_ ## LAYER ## _ ## POSITION1 { \
     //     };
     //     // redo: o,u
     //     // => : u,j
-    };
+    // };
 
     macros {
         ZMK_MACRO(macro_for,
