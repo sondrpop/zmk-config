@@ -142,13 +142,9 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
 
         strdy_layer {
             bindings = <
-//     combos: [   esc   ] [   undo   ] [   copy   ] [   cut   ]                    [ (()=>{ ]  [   pste   ]  [   redo   ]  [   =>   ]
+
             &kp V     &kp M        &kp L        &kp C        &kp P                &kp X       &kp F        &kp O           &kp U        &kp J
-
-//     combos:   [   [   ]    [   {   ]    [   (   ]    [   =   ]                        [   :   ]    [   )   ]       [   }   ]    [   ]   ]
             &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D  &kp Y                &key_repeat &hrr RGUI N  &hrr RALT A     &hrr RCTRL E &kp I
-
-//     combos:   [       ]    [       ]    [       ]    [       ]                        [       ]    [       ]       [       ]    [       ]
             &kp Z     &kp K        &hll numb Q  &hll symr G  &kp W                &kp B       &hlr syml H  &hlr nav DOT    &kp SQT      &kp COMMA
                                                 &sk LSHFT    &kp SPACE            &kp BSPC    &leader
 
@@ -185,10 +181,10 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
         numb_layer {
             bindings = <
 
-            &trans     &trans     &trans     &trans     &trans               &kp STAR   &kp N7     &kp N8     &kp N9     &kp PLUS
-            &trans     &trans     &trans     &trans     &trans               &kp N0     &kp N4     &kp N5     &kp N6     &kp MINUS
-            &trans     &trans     &trans     &trans     &trans               &kp SLASH  &kp N1     &kp N2     &kp N3     &kp EQUAL
-                                             &trans     &mo fn               &trans     &trans
+            &trans     &trans           &kp UP          &trans           &trans         &kp STAR   &kp N7        &kp N8        &kp N9         &kp PLUS
+            &trans     &hrl LCTRL LEFT  &hrl LALT DOWN  &hrl LGUI RIGHT  &trans         &kp N0     &hrr RGUI N4  &hrr RALT N5  &hrr RCTRL N6  &kp MINUS
+            &trans     &trans           &trans          &trans           &trans         &kp SLASH  &kp N1        &kp N2        &kp N3         &kp EQUAL
+                                                        &trans     &mo fn               &trans     &trans
 
             >;
         };
