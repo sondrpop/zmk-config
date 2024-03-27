@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "*.keymap": "c",
-    "helper.h": "c"
+    "helper.h": "c",
+    "keypos_34keys.h": "c"
   }
 }
