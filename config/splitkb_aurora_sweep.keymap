@@ -66,7 +66,7 @@ MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
 
 #define COMBOS_TERM 50
 #define BASE_COMBOS_MACRO(POSITION1, POSITION2, BINDING) \
-thumbcombos_ ## LAYER ## _ ## POSITION1 { \
+combo_ ## LAYER ## _ ## POSITION1 { \
   layers = <0>; \
   key-positions = <POSITION1 ## POSITION2>; \
   bindings = <BINDING>; \
@@ -75,117 +75,58 @@ thumbcombos_ ## LAYER ## _ ## POSITION1 { \
 
 / {
 
-    combos {
-        compatible = "zmk,combos";
-        BASE_COMBOS_MACRO(0, 1, &kp TAB)
-    //     // comments use main layout to more easily indicate combo key locations
-    //     // tab: d,space
-    //     combo_tab {
-    //         timeout-ms = <50>;
-    //         key-positions = <13 31>;
-    //         bindings = <&kp TAB>;
-    //     };
-    //     // enter: [bspc],n
-    //     combo_ent {
-    //         timeout-ms = <50>;
-    //         key-positions = <16 32>;
-    //         bindings = <&kp RET>;
-    //     };
-    //     // --- HOME ROW: LEFT TO RIGHT ---//
-    //     // left square bracket: s,t
-    //     combo_lbracket {
-    //         timeout-ms = <50>;
-    //         key-positions = <10 11>;
-    //         bindings = <&kp LBKT>;
-    //     };
-    //     // left curly brace: t,r
-    //     combo_lbrace {
-    //         timeout-ms = <50>;
-    //         key-positions = <11 12>;
-    //         bindings = <&kp LBRC>;
-    //     };
-    //     // left parenthesis: r,d
-    //     combo_lparen {
-    //         timeout-ms = <50>;
-    //         key-positions = <12 13>;
-    //         bindings = <&kp LPAR>;
-    //     };
-    //     // equals: d,y
-    //     combo_eqls {
-    //         timeout-ms = <50>;
-    //         key-positions = <13 14>;
-    //         bindings = <&kp EQUAL>;
-    //     };
-    //     // colon: repeat,n
-    //     combo_colon {
-    //         timeout-ms = <50>;
-    //         key-positions = <15 16>;
-    //         bindings = <&kp COLON>;
-    //     };
-    //     // right parenthesis: n,a
-    //     combo_rparen {
-    //         timeout-ms = <50>;
-    //         key-positions = <16 17>;
-    //         bindings = <&kp RPAR>;
-    //     };
-    //     // right curly brace: t,r
-    //     combo_rbrace {
-    //         timeout-ms = <50>;
-    //         key-positions = <17 18>;
-    //         bindings = <&kp RBRC>;
-    //     };
-    //     // right square bracket: s,t
-    //     combo_rbracket {
-    //         timeout-ms = <50>;
-    //         key-positions = <18 19>;
-    //         bindings = <&kp RBKT>;
-    //     };
-
-    //     //---TOP ROW: LEFT TO RIGHT---//
-    //     // escape: v,m
-    //     combo_esc {
-    //         timeout-ms = <50>;
-    //         key-positions = <1 2>;
-    //         bindings = <&kp ESC>;
-    //     };
-    //     // undo: m,l
-    //     combo_undo {
-    //         timeout-ms = <50>;
-    //         key-positions = <2 3>;
-    //         bindings = <&kp LBKT>;
-    //     };
-    //     // copy: l,c
-    //     combo_copy {
-    //         timeout-ms = <50>;
-    //         key-positions = <3 4>;
-    //         bindings = <&kp LBRC>;
-    //     };
-    //     // cut: c,p
-    //     combo_cut {
-    //         timeout-ms = <50>;
-    //         key-positions = <4 5>;
-    //         bindings = <&kp LPAR>;
-    //     };
-    //     // (()=>{ : x,f
-    //     combo_callback {
-    //         timeout-ms = <50>;
-    //         key-positions = <5 6>;
-    //         bindings = <&kp EQUAL>;
-    //     };
-    //     // paste: f,o
-    //     combo_callback {
-    //         timeout-ms = <50>;
-    //         key-positions = <5 6>;
-    //         bindings = <&kp EQUAL>;
-    //     };
-    //     // redo: o,u
-    //     // => : u,j
+    macros {
+        ZMK_MACRO(macro_arrow,
+            bindings = <&kp SPACE &kp EQUAL &kp GT &kp SPACE>;
+        )
+        ZMK_MACRO(macro_callback,
+            bindings = <&kp LPAR &kp LPAR &kp RPAR &macro_arrow &kp RBRC>;
+        )
     };
 
-    macros {
-        ZMK_MACRO(macro_for,
-            bindings = <&kp F &kp O &kp R>;
-        )
+    combos {
+        compatible = "zmk,combos";
+        // comments use main layout to more easily indicate combo key locations
+        // tab: d,space
+        BASE_COMBOS_MACRO(13, 31, &kp TAB)
+        // enter: [bspc],n
+        BASE_COMBOS_MACRO(16, 32, &kp RET)
+
+        // --- HOME ROW: LEFT TO RIGHT ---//
+        // left square bracket: s,t
+        BASE_COMBOS_MACRO(10, 11, &kp LBKT)
+        // left curly brace: t,r
+        BASE_COMBOS_MACRO(11, 12, &kp LBRC)
+        // left parenthesis: r,d
+        BASE_COMBOS_MACRO(12, 13, &kp LPAR)
+        // equals: d,y
+        BASE_COMBOS_MACRO(13, 14, &kp EQUAL)
+        // colon: repeat,n
+        BASE_COMBOS_MACRO(15, 16, &kp COLON)
+        // right parenthesis: n,a
+        BASE_COMBOS_MACRO(16, 17, &kp RPAR)
+        // right curly brace: t,r
+        BASE_COMBOS_MACRO(17, 18, &kp RBRC)
+        // right square bracket: s,t
+        BASE_COMBOS_MACRO(18, 19, &kp RBKT)
+
+        //---TOP ROW: LEFT TO RIGHT---//
+        // escape: v,m
+        BASE_COMBOS_MACRO(0, 1, &kp ESC)
+        // undo: m,l
+        BASE_COMBOS_MACRO(1, 2, &kp LG(Z))
+        // copy: l,c
+        BASE_COMBOS_MACRO(2, 3 , &kp LG(C))
+        // cut: c,p
+        BASE_COMBOS_MACRO(3, 4 , &kp LG(X))
+        // (() => { : x,f
+        BASE_COMBOS_MACRO(5, 6 , &macro_callback)
+        // paste: f,o
+        BASE_COMBOS_MACRO(6, 7 , &kp LG(V))
+        // redo: o,u
+        BASE_COMBOS_MACRO(7,8 , &kp LG(LS(Z)))
+        // => : u,j
+        BASE_COMBOS_MACRO(8,9 , &macro_arrow)
     };
 
     leader_sequences {
