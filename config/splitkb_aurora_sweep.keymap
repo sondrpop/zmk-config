@@ -66,7 +66,7 @@ MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
 
 #define COMBOS_TERM 50
 #define BASE_COMBOS_MACRO(POSITION1, POSITION2, BINDING) \
-combo_ ## LAYER ## _ ## POSITION1 { \
+combo_ ## POSITION1 ## _ ## POSITION2 { \
   layers = <0>; \
   key-positions = <POSITION1 ## POSITION2>; \
   bindings = <BINDING>; \
@@ -116,17 +116,17 @@ combo_ ## LAYER ## _ ## POSITION1 { \
         // undo: m,l
         BASE_COMBOS_MACRO(1, 2, &kp LG(Z))
         // copy: l,c
-        BASE_COMBOS_MACRO(2, 3 , &kp LG(C))
+        BASE_COMBOS_MACRO(2, 3, &kp LG(C))
         // cut: c,p
-        BASE_COMBOS_MACRO(3, 4 , &kp LG(X))
+        BASE_COMBOS_MACRO(3, 4, &kp LG(X))
         // (() => { : x,f
-        BASE_COMBOS_MACRO(5, 6 , &macro_callback)
+        BASE_COMBOS_MACRO(5, 6, &macro_callback)
         // paste: f,o
-        BASE_COMBOS_MACRO(6, 7 , &kp LG(V))
+        BASE_COMBOS_MACRO(6, 7, &kp LG(V))
         // redo: o,u
-        BASE_COMBOS_MACRO(7,8 , &kp LG(LS(Z)))
+        BASE_COMBOS_MACRO(7, 8, &kp LG(LS(Z)))
         // => : u,j
-        BASE_COMBOS_MACRO(8,9 , &macro_arrow)
+        BASE_COMBOS_MACRO(8, 9, &macro_arrow)
     };
 
     leader_sequences {
