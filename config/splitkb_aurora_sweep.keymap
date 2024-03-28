@@ -49,6 +49,9 @@ MAKE_HRM(hrr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 MAKE_HRM(hll, &mo, &kp, KEYS_R THUMBS)  // left-hand layer tap HRMs
 MAKE_HRM(hlr, &mo, &kp, KEYS_L THUMBS)  // right-hand layer tap HRMs
 
+MAKE_HRM(hsl, &mo, &sk, KEYS_R THUMBS)  // left-hand sticky layer tap HRMs
+MAKE_HRM(hsr, &mo, &sk, KEYS_L THUMBS)  // right-hand sticky layer tap HRMs
+
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <220>;
@@ -79,7 +82,7 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
             bindings = <&kp SPACE &kp EQUAL &kp GT &kp SPACE>;
         )
         ZMK_MACRO(macro_callback,
-            bindings = <&kp LPAR &kp LPAR &kp RPAR &macro_arrow &kp RBRC>;
+            bindings = <&kp LPAR &kp LPAR &kp RPAR &kp SPACE &kp EQUAL &kp GT &kp SPACE &kp LBRC>;
         )
     };
 
@@ -154,8 +157,8 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
 
             &kp V     &kp M        &kp L        &kp C           &kp P                &kp X       &kp F        &kp O        &kp U        &kp J
             &kp S     &hrl LCTRL T &hrl LALT R  &hrl LGUI D     &kp Y                &key_repeat &hrr RGUI N  &hrr RALT A  &hrr RCTRL E &kp I
-            &kp Z     &kp K        &hll numb Q  &hll symr G     &kp W                &kp B       &hlr syml H  &kp DOT      &kp SQT      &kp COMMA
-                                                &td_shift_hyper &kp SPACE            &kp BSPC    &leader
+            &kp Z     &kp K        &kp Q        &hll symr G     &kp W                &kp B       &hlr syml H  &kp DOT      &kp SQT      &kp COMMA
+                             &hsl numb shift    &hrl LG(LS(LA(LCTRL))) SPACE         &kp BSPC    &leader
 
             >;
         };
@@ -165,8 +168,8 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
 
             &kp Q     &kp W        &kp E        &kp R        &kp T                &kp Y       &kp U        &kp I        &kp O        &kp P
             &kp A     &hrl LCTRL S &hrl LALT D  &hrl LGUI F  &kp G                &kp H       &hrr RGUI J  &hrr RALT K  &hrr RCTRL L &kp SEMI
-            &kp Z     &kp X        &hll numb C  &hll symr V  &kp B                &kp N       &hlr syml M  &kp DOT      &kp SQT      &kp COMMA
-                                                &sk LSHFT    &kp SPACE            &kp BSPC    &leader
+            &kp Z     &kp X        &kp C        &hll symr V  &kp B                &kp N       &hlr syml M  &kp DOT      &kp SQT      &kp COMMA
+                              &hsl numb shift   &hrl LG(LS(LA(LCTRL))) SPACE      &kp BSPC    &leader
 
             >;
         };
