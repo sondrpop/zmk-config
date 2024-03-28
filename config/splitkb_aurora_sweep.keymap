@@ -139,6 +139,7 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
     behaviors {
         td_shift_hyper: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
+            label="tapdance shift hyper";
             #binding-cells = <0>;
             tapping-term-ms = <125>;
             bindings = <&sk LSHFT>, <&sk LG(LS(LA(LCTRL)))>;
