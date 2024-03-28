@@ -129,6 +129,24 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
         BASE_COMBOS_MACRO(7, 8, &kp LG(LS(Z)))
         // => : u,j
         BASE_COMBOS_MACRO(8, 9, &macro_arrow)
+
+        //---TOP ROW: LEFT TO RIGHT---//
+        // move to space to left: v + t
+        BASE_COMBOS_MACRO(0, 11, &kp LG(LS(LA(LC(P)))))
+        // move to space to right: e + j
+        BASE_COMBOS_MACRO(9, 18, &kp LG(LS(LA(LC(N)))))
+        // move window to space to left: z + k
+        BASE_COMBOS_MACRO(20, 21, &kp LG(LS(LC(P))))
+        // move window to space to right: sqt + comma
+        BASE_COMBOS_MACRO(28, 29, &kp LG(LS(LC(N))))
+        // focus window to left: q + g
+        BASE_COMBOS_MACRO(22, 23, &kp LG(LS(LA(LC(L)))))
+        // focus window to right: h + dot
+        BASE_COMBOS_MACRO(26, 27, &kp LG(LS(LA(LC(R)))))
+        // swap with window to left: k + q
+        BASE_COMBOS_MACRO(21, 22, &kp LG(LS(LC(L))))
+        // swap with window to right: dot + sqt
+        BASE_COMBOS_MACRO(27, 28, &kp LG(LS(LC(R))))
     };
 
     leader_sequences {
@@ -205,17 +223,51 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
             key-positions = <11 11>;
             bindings = <&kp LG(T)>;
         };
+        // //----Yabai & skhdrc----//
+        // // Go to space to left: s + p
+        // seq_yabai_space_prev {
+        //     key-positions = <10 3>;
+        //     bindings = <&kp LG(LS(LA(LC(P))))>;
+        // };
+        // // Go to space to right: s + n
+        // seq_yabai_space_next {
+        //     key-positions = <10 10>;
+        //     bindings = <&kp LG(LS(LA(LC(N))))>;
+        // };
+        // // Focus window to the left: w + p
+        // seq_yabai_window_focus_left {
+        //     key-positions = <10 10>;
+        //     bindings = <&kp LG(LS(LA(LC(L))))>;
+        // };
+        // // Focus window to the right: w + n
+        // seq_yabai_window_focus_right {
+        //     key-positions = <10 10>;
+        //     bindings = <&kp LG(LS(LA(LC(R))))>;
+        // };
+        // // Swap current window with the one to the left: w + l
+        // seq_yabai_window_swap_left {
+        //     key-positions = <10 10>;
+        //     bindings = <&kp LG(LS(LC(L)))>;
+        // };
+        // // Swap current window with the one to the right: w + r
+        // seq_yabai_window_swap_right {
+        //     key-positions = <10 10>;
+        //     bindings = <&kp LG(LS(LC(R)))>;
+        // };
+        // // Move current window to the space to the left:
+        // seq_yabai_window_space_left {
+        //     key-positions = <10 10>;
+        //     bindings = <&kp LG(LS(LC(P)))>;
+        // };
+        // // Move current window to the space to the right
+        // seq_yabai_window_space_right {
+        //     key-positions = <10 10>;
+        //     bindings = <&kp LG(LS(LC(N)))>;
+        // };
         //----Macros: m + __ ----//
         // TODO - e.g. "(() => {" etc
-
-        //----Random----//
-        // Open mac spotlight: lshift
-        seq_spotlight {
-            key-positions = <30>;
-            bindings = <&kp LG(SPACE)>;
-        };
     };
-
+    // open applications (hyper + ): i for iterm, b for brave, v for vscode, g for gitkraken
     keymap {
         compatible = "zmk,keymap";
 
