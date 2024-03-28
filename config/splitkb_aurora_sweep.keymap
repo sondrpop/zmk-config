@@ -164,15 +164,30 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
             key-positions = <24 24>;
             bindings = <&kp LG(N)>;
         };
+        // Save : s
+        seq_window_save {
+            key-positions = <24 10>;
+            bindings = <&kp LG(S)>;
+        };
+        // Save all: s + a
+        seq_window_save_all {
+            key-positions = <24 10 17>;
+            bindings = <&kp LG(LS(S))>;
+        };
+        // Open devtools: d
+        seq_window_open_devtools {
+            key-positions = <24 13>;
+            bindings = <&kp LG(LA(I))>;
+        };
         //----Tab Management: t + __ ----//
         // Move to next: n
         seq_tab_to_next {
-            key-positions = <11 4>;
+            key-positions = <11 16>;
             bindings = <&kp LC(TAB)>;
         };
         // Move to prev: p
         seq_tab_to_prev {
-            key-positions = <11 16>;
+            key-positions = <11 4>;
             bindings = <&kp LS(LC(TAB))>;
         };
         // Close: c
@@ -189,6 +204,15 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
         seq_tab_new {
             key-positions = <11 11>;
             bindings = <&kp LG(T)>;
+        };
+        //----Macros: m + __ ----//
+        // TODO - e.g. "(() => {" etc
+
+        //----Random----//
+        // Open mac spotlight: lshift
+        seq_spotlight {
+            key-positions = <30>;
+            bindings = <&kp LG(SPACE)>;
         };
     };
 
@@ -250,7 +274,7 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
             &trans     &trans           &kp UP          &trans           &trans         &kp STAR   &kp N7        &kp N8        &kp N9         &kp PLUS
             &trans     &hrl LCTRL LEFT  &hrl LALT DOWN  &hrl LGUI RIGHT  &trans         &kp N0     &hrr RGUI N4  &hrr RALT N5  &hrr RCTRL N6  &kp MINUS
             &trans     &trans           &trans          &trans           &trans         &kp SLASH  &kp N1        &kp N2        &kp N3         &kp EQUAL
-                                                        &trans           &mo fn         &trans     &trans
+                                                        &trans           &trans         &trans     &mo fn
 
             >;
         };
