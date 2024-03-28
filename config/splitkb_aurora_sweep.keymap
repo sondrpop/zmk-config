@@ -137,17 +137,17 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
         // Move to left: l
         seq_window_left {
             key-positions = <24 2>;
-            bindings = <&kp LG(LS(LA(LCTRL(L))))>;
+            bindings = <&kp LG(LS(LA(LC(L))))>;
         };
         // Move to right: r
         seq_window_right {
             key-positions = <24 12>;
-            bindings = <&kp LG(LS(LA(LCTRL(R))))>;
+            bindings = <&kp LG(LS(LA(LC(R))))>;
         };
         // Fill screen: f
         seq_window_fill {
             key-positions = <24 6>;
-            bindings = <&kp LG(LS(LA(LCTRL(F))))>;
+            bindings = <&kp LG(LS(LA(LC(F))))>;
         };
         // Close: c
         seq_window_close {
@@ -168,12 +168,12 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
         // Move to next: n
         seq_tab_to_next {
             key-positions = <11 4>;
-            bindings = <&kp LCTRL(TAB)>;
+            bindings = <&kp LC(TAB)>;
         };
         // Move to prev: p
         seq_tab_to_prev {
             key-positions = <11 16>;
-            bindings = <&kp LS(LCTRL(TAB))>;
+            bindings = <&kp LS(LC(TAB))>;
         };
         // Close: c
         seq_tab_close {
