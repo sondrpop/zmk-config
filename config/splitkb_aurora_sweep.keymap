@@ -66,7 +66,7 @@ MAKE_HRM(hsr, &mo, &sk, KEYS_L THUMBS)  // right-hand sticky layer tap HRMs
     hold-trigger-key-positions = <0>;
 };
 
-#define COMBOS_TERM 50
+#define COMBOS_TERM 25
 #define BASE_COMBOS_MACRO(POSITION1, POSITION2, BINDING) \
 combo_ ## POSITION1 ## _ ## POSITION2 { \
   layers = <0 6>; \
@@ -101,7 +101,7 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
         BASE_COMBOS_MACRO(11, 12, &kp LBRC)
         // left parenthesis: r,d
         BASE_COMBOS_MACRO(12, 13, &kp LPAR)
-        // equals: d,y
+        // equals: d,
         BASE_COMBOS_MACRO(13, 14, &kp EQUAL)
         // colon: repeat,n
         BASE_COMBOS_MACRO(15, 16, &kp COLON)
