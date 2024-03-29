@@ -2,12 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: nickconway
-      url-base: https://github.com/nickconway
   projects:
     - name: zmk
-      remote: nickconway
-      revision: leader-key
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config
