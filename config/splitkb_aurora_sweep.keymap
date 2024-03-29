@@ -57,7 +57,7 @@ MAKE_HRM(hsr, &mo, &sk, KEYS_L THUMBS)  // right-hand sticky layer tap HRMs
     hold-trigger-key-positions = <0>;
 };
 
-#define COMBOS_TERM 37
+#define COMBOS_TERM 50
 #define BASE_COMBOS_MACRO(POSITION1, POSITION2, BINDING) \
 base_combo_ ## POSITION1 ## _ ## POSITION2 { \
   layers = <0>; \
