@@ -59,8 +59,15 @@ MAKE_HRM(hsr, &mo, &sk, KEYS_L THUMBS)  // right-hand sticky layer tap HRMs
 
 #define COMBOS_TERM 37
 #define BASE_COMBOS_MACRO(POSITION1, POSITION2, BINDING) \
-combo_ ## POSITION1 ## _ ## POSITION2 { \
-  layers = <0 6>; \
+base_combo_ ## POSITION1 ## _ ## POSITION2 { \
+  layers = <0>; \
+  key-positions = <POSITION1 POSITION2>; \
+  bindings = <BINDING>; \
+  timeout-ms = <COMBOS_TERM>; \
+};
+#define NUMB_COMBOS_MACRO(POSITION1, POSITION2, BINDING) \
+numb_combo_ ## POSITION1 ## _ ## POSITION2 { \
+  layers = <4>; \
   key-positions = <POSITION1 POSITION2>; \
   bindings = <BINDING>; \
   timeout-ms = <COMBOS_TERM>; \
@@ -115,38 +122,40 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
         //---TOP ROW: LEFT TO RIGHT---//
         // escape: v,m
         BASE_COMBOS_MACRO(0, 1, &kp ESC)
+
         // // undo: m,l
         // BASE_COMBOS_MACRO(1, 2, &kp LG(Z))
         // // copy: l,c
         // BASE_COMBOS_MACRO(2, 3, &kp LG(C))
         // // cut: c,p
         // BASE_COMBOS_MACRO(3, 4, &kp LG(X))
+
         // (() => { : x,f
-        BASE_COMBOS_MACRO(5, 6, &macro_callback)
+        NUMB_COMBOS_MACRO(5, 6, &macro_callback)
         // // paste: f,o
         // BASE_COMBOS_MACRO(6, 7, &kp LG(V))
         // // redo: o,u
         // BASE_COMBOS_MACRO(7, 8, &kp LG(LS(Z)))
         // => : u,j
-        BASE_COMBOS_MACRO(8, 9, &macro_arrow)
+        NUMB_COMBOS_MACRO(8, 9, &macro_arrow)
 
         //---TOP ROW: LEFT TO RIGHT---//
         // move to space to left: v + t
-        BASE_COMBOS_MACRO(0, 11, &kp LG(LS(LA(LC(P)))))
+        NUMB_COMBOS_MACRO(0, 11, &kp LG(LS(LA(LC(P)))))
         // move to space to right: e + j
-        BASE_COMBOS_MACRO(9, 18, &kp LG(LS(LA(LC(N)))))
+        NUMB_COMBOS_MACRO(9, 18, &kp LG(LS(LA(LC(N)))))
         // move window to space to left: z + k
-        BASE_COMBOS_MACRO(20, 21, &kp LG(LS(LC(P))))
+        NUMB_COMBOS_MACRO(20, 21, &kp LG(LS(LC(P))))
         // move window to space to right: sqt + comma
-        BASE_COMBOS_MACRO(28, 29, &kp LG(LS(LC(N))))
+        NUMB_COMBOS_MACRO(28, 29, &kp LG(LS(LC(N))))
         // focus window to left: q + g
-        BASE_COMBOS_MACRO(22, 23, &kp LG(LS(LA(LC(L)))))
+        NUMB_COMBOS_MACRO(22, 23, &kp LG(LS(LA(LC(L)))))
         // focus window to right: h + dot
-        BASE_COMBOS_MACRO(26, 27, &kp LG(LS(LA(LC(R)))))
+        NUMB_COMBOS_MACRO(26, 27, &kp LG(LS(LA(LC(R)))))
         // swap with window to left: k + q
-        BASE_COMBOS_MACRO(21, 22, &kp LG(LS(LC(L))))
+        NUMB_COMBOS_MACRO(21, 22, &kp LG(LS(LC(L))))
         // swap with window to right: dot + sqt
-        BASE_COMBOS_MACRO(27, 28, &kp LG(LS(LC(R))))
+        NUMB_COMBOS_MACRO(27, 28, &kp LG(LS(LC(R))))
     };
 
     keymap {
