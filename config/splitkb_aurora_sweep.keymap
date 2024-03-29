@@ -152,21 +152,6 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
     leader_sequences {
         compatible = "zmk,leader-sequences";
         //----Window Management: w + ___ ----//
-        // Move to left: l
-        seq_window_left {
-            key-positions = <24 2>;
-            bindings = <&kp LG(LS(LA(LC(L))))>;
-        };
-        // Move to right: r
-        seq_window_right {
-            key-positions = <24 12>;
-            bindings = <&kp LG(LS(LA(LC(R))))>;
-        };
-        // Fill screen: f
-        seq_window_fill {
-            key-positions = <24 6>;
-            bindings = <&kp LG(LS(LA(LC(F))))>;
-        };
         // Close: c
         seq_window_close {
             key-positions = <24 3>;
@@ -176,11 +161,6 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
         seq_window_quit {
             key-positions = <24 22>;
             bindings = <&kp LG(Q)>;
-        };
-        // New : w
-        seq_window_new {
-            key-positions = <24 24>;
-            bindings = <&kp LG(N)>;
         };
         // Save : s
         seq_window_save {
@@ -223,47 +203,6 @@ combo_ ## POSITION1 ## _ ## POSITION2 { \
             key-positions = <11 11>;
             bindings = <&kp LG(T)>;
         };
-        // //----Yabai & skhdrc----//
-        // // Go to space to left: s + p
-        // seq_yabai_space_prev {
-        //     key-positions = <10 3>;
-        //     bindings = <&kp LG(LS(LA(LC(P))))>;
-        // };
-        // // Go to space to right: s + n
-        // seq_yabai_space_next {
-        //     key-positions = <10 10>;
-        //     bindings = <&kp LG(LS(LA(LC(N))))>;
-        // };
-        // // Focus window to the left: w + p
-        // seq_yabai_window_focus_left {
-        //     key-positions = <10 10>;
-        //     bindings = <&kp LG(LS(LA(LC(L))))>;
-        // };
-        // // Focus window to the right: w + n
-        // seq_yabai_window_focus_right {
-        //     key-positions = <10 10>;
-        //     bindings = <&kp LG(LS(LA(LC(R))))>;
-        // };
-        // // Swap current window with the one to the left: w + l
-        // seq_yabai_window_swap_left {
-        //     key-positions = <10 10>;
-        //     bindings = <&kp LG(LS(LC(L)))>;
-        // };
-        // // Swap current window with the one to the right: w + r
-        // seq_yabai_window_swap_right {
-        //     key-positions = <10 10>;
-        //     bindings = <&kp LG(LS(LC(R)))>;
-        // };
-        // // Move current window to the space to the left:
-        // seq_yabai_window_space_left {
-        //     key-positions = <10 10>;
-        //     bindings = <&kp LG(LS(LC(P)))>;
-        // };
-        // // Move current window to the space to the right
-        // seq_yabai_window_space_right {
-        //     key-positions = <10 10>;
-        //     bindings = <&kp LG(LS(LC(N)))>;
-        // };
         //----Macros: m + __ ----//
         // TODO - e.g. "(() => {" etc
     };
