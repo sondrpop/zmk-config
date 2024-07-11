@@ -181,7 +181,7 @@ numb_combo_ ## POSITION1 ## _ ## POSITION2 { \
                                    &hrl LG(LS(LA(LCTRL))) SPACE &sk LSHFT         &mo numb    &hlr fn BSPC
 
             >;
-        }
+        };
 
 
         syml_layer {
