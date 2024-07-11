@@ -161,27 +161,6 @@ numb_combo_ ## POSITION1 ## _ ## POSITION2 { \
     keymap {
         compatible = "zmk,keymap";
 
-        // qwert_layer {
-        //     bindings = <
-
-        //     &kp Q     &kp W        &kp E        &kp R        &kp T                &kp Y       &kp U        &kp I        &kp O        &kp P
-        //     &kp A     &hrl LCTRL S &hrl LALT D  &hrl LGUI F  &kp G                &kp H       &hrr RGUI J  &hrr RALT K  &hrr RCTRL L &kp SEMI
-        //     &kp Z     &kp X        &kp C        &hll symr V  &kp B                &kp N       &hlr syml M  &kp DOT      &kp SQT      &kp COMMA
-        //                         &hrl LG(LS(LA(LCTRL))) SPACE &sk LSHFT            &mo numb    &hlr fn BSPC
-
-        //     >;
-        // };
-        qwert_layer {
-            bindings = <
-
-            &kp Q     &kp W        &kp E        &kp R        &kp T                &kp Y       &kp U        &kp I        &kp O        &kp P
-            &kp A     &kp S        &kp D        &kp F        &kp G                &kp H       &kp J        &kp K        &kp L        &kp SEMI
-            &kp Z     &kp X        &kp C        &kp V        &kp B                &kp N       &kp M        &kp DOT      &kp SQT      &kp RET
-                                                &kp LSHFT    &kp SPACE            &mo numb    &kp BSPC
-
-            >;
-        };
-
         strdy_layer {
             bindings = <
 
@@ -192,6 +171,17 @@ numb_combo_ ## POSITION1 ## _ ## POSITION2 { \
 
             >;
         };
+
+        qwert_layer {
+            bindings = <
+
+            &kp Q     &kp W        &kp E        &kp R        &kp T                &kp Y       &kp U        &kp I        &kp O        &kp P
+            &kp A     &hrl LCTRL S &hrl LALT D  &hrl LGUI F  &kp G                &kp H       &hrr RGUI J  &hrr RALT K  &hrr RCTRL L &kp SEMI
+            &kp Z     &kp X        &kp C        &hll symr V  &kp B                &kp N       &kp syml M   &kp SQT      &kp SEMI     &kp COMMA
+                                   &hrl LG(LS(LA(LCTRL))) SPACE &sk LSHFT         &mo numb    &hlr fn BSPC
+
+            >;
+        }
 
 
         syml_layer {
